@@ -9,6 +9,8 @@ html {
   background-attachment: fixed;
   background-position: 40% center; }
 
+#music .title-tag {
+  text-decoration: none; }
 #music .title {
   text-align: center;
   font-family: "Quicksand", sans-serif;

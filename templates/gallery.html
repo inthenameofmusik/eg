@@ -21,7 +21,7 @@
 <body>
 	<div id="gallery">
 		<div class="bg-cover">
-			<div class="title"><span class="name">EG</span></div>
+			<a class="title-tag" href="/"><div class="title"><span class="name">EG</span> | Gallery</div></a>
 			<div id="lightgallery">
 				<a href="{% static 'img/elena_1.jpg' %}">
 					<div class="img-hold" style="position:relative;background:url('/static/img/elena_1.jpg');background-size:100%;background-position:center;">
@@ -85,7 +85,8 @@
 	<script>
 		$(function() {
 			$('#lightgallery').lightGallery({
-				thumbnail: false
+				thumbnail: false,
+				download: false
 			});
 		})
 	</script>

@@ -5,14 +5,49 @@
 <head>
 	<meta charset="UTF-8">
 	<title>EG</title>
-	<link rel="stylesheet" href="{% static 'css/home.css' %}">
 	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" href="{% static 'css/home.css' %}">
+
 </head>
 <body>
 	<div id="home" style="background:url({% static 'img/elena_1.jpg' %});background-size:cover;background-position:center;">
 		<div class="content-hold">
+			<div class="social">
+				<a href="https://open.spotify.com/artist/7vhSvd0HDZOGELPdDDgVYt">
+					<img src="{% static 'img/social_spotify.png' %}" alt="">
+				</a>
+				<a href="https://www.youtube.com/channel/UCVOdqFLrP-7dPokRnZ02JVw">
+					<img src="{% static 'img/social_youtube.png' %}" alt="">
+				</a>
+				<a href="https://itunes.apple.com/us/artist/elena-goddard/id1142088400">
+					<img src="{% static 'img/social_apple.png' %}" alt="">
+				</a>
+				<a href="https://tidal.com/artist/8045833">
+					<img src="{% static 'img/social_tidal.png' %}" alt="">
+				</a>
+			</div>
 			<div class="home-title">EG</div>
 			<div class="nav">Music<span class="space">&nbsp;&nbsp;</span>About<span class="space">&nbsp;&nbsp;</span>EP<span class="space">&nbsp;&nbsp;</span><span class="space">&nbsp;&nbsp;</span><span class="space">&nbsp;&nbsp;</span>Gallery<span class="space">&nbsp;&nbsp;</span>Collaborators<span class="space">&nbsp;&nbsp;</span>Contact</div>
+			<nav class="left">
+				<span class="i1">Latest</span>
+				<span class="i2">EP</span>
+				<span class="i3">Music</span>
+			</nav>
+			<nav class="right">
+				<span class="i1">Gallery</span>
+				<span class="i2">Bio</span>
+				<span class="i3">Sign Up</span>
+			</nav>
+			<form method="POST">
+				{% csrf_token %}
+				{{ form.name }}
+				{{ form.email }}
+				<button type="submit">Register</button>
+			</form>
+			<div id="home-arrow">
+				<img src="{% static 'img/_down.png' %}" alt="">
+			</div>
 		</div>
 	</div>
 	<div id="track">
@@ -53,5 +88,47 @@ The intensity that lies at the core of Elena as a person shines through her musi
 As someone who has knocked down the walls of every box society has tried to place her in, Elena is a living breathing example of conquering fears, believing in yourself, navigating the world of pop culture, and bringing our generation back in love with honest, genuine music.
 		</div>
 	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+	<script>
+		$(function() {
+			$('#home-arrow').click(function() {
+				$('html, body').animate({
+					scrollTop: 700
+				}, 700, 'easeInQuart');
+			})
+
+			// left nav items
+			$('nav.left .i1').click(function() {
+				$('html, body').animate({
+					scrollTop: 800
+				}, 700, 'easeInQuart');
+			})
+			$('nav.left .i2').click(function() {
+				$('html, body').animate({
+					scrollTop: 1500
+				}, 700, 'easeInQuart');
+			})
+			$('nav.left .i3').click(function() {
+				window.location.href = '/music';
+			})
+
+			// right nav items
+			$('nav.right .i1').click(function() {
+				window.location.href = '/gallery';
+			})
+			$('nav.right .i2').click(function() {
+				$('html, body').animate({
+					scrollTop: 1800
+				}, 700, 'easeInQuart');
+			})
+			$('nav.right .i3').click(function() {
+				$('html, body').animate({
+					scrollTop: 500
+				}, 700, 'easeInQuart');
+			})
+		})
+	</script>
 </body>
 </html>

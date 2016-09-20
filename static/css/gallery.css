@@ -15,14 +15,16 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(255, 255, 255, 0.5); }
+    #gallery .bg-cover .title-tag {
+      text-decoration: none; }
     #gallery .bg-cover .title {
       margin: 50px auto 95px;
       text-align: center;
       font-family: "Quicksand", sans-serif;
-      font-size: 90px;
-      color: rgba(57, 97, 132, 0.7); }
+      font-size: 50px;
+      color: rgba(255, 255, 255, 0.8); }
       #gallery .bg-cover .title .name {
-        letter-spacing: -18px; }
+        letter-spacing: -10px; }
     #gallery .bg-cover #lightgallery {
       max-width: 800px;
       margin: 0px auto; }

@@ -18,14 +18,38 @@ body
 		height: 100%
 		left: 0
 		background: rgba(0,0,0,0.35)
+		.social
+			position: absolute
+			top: 10px
+			left: 10px
+			opacity: 0.45
+			transition: opacity 150ms linear
+			&:hover
+				opacity: 0.85
+				transition: opacity 150ms linear
+			a
+				text-decoration: none
+				img
+					width: 35px
+					margin: 0px 3px
+					position: relative
+					top: 0
+					transition: top 100ms linear
+					&:hover
+						top: -3px
+						transition: top 100ms linear
 		.home-title
-			margin-top: 45px
 			text-align: center
 			font-family: Verdana
 			font-size: 110px
 			color: rgba(255,255,255,0.65)
 			letter-spacing: -12px
+			width: 300px
+			margin: 65px auto 0px
+			position: relative
+			left: -6px
 		.nav
+			display: none
 			position: relative
 			left: 18%
 			top: -75px
@@ -35,6 +59,85 @@ body
 			width: 70%
 			.space
 				letter-spacing: 40px
+		nav
+			float: left
+			width: 50%
+			box-sizing: border-box
+			position: relative
+			top: -75px
+			span
+				color: rgba(255,255,255,0.8)
+				font-family: 'Quicksand', sans-serif
+				font-size: 17px
+				cursor: pointer
+				&:hover
+					color: rgba(255,255,255,1)
+			&.left
+				text-align: left
+				padding-left: 10%
+				span
+					padding-right: 70px
+			&.right
+				text-align: right
+				padding-right: 10%
+				span
+					padding-left: 60px
+		#home-arrow
+			position: absolute
+			bottom: 40px
+			margin-left: auto
+			margin-right: auto
+			left: 0
+			right: 0
+			// border: 1px red solid
+			text-align: center
+			img
+				width: 60px
+				text-align: center
+				opacity: 0.7
+		form
+			position: absolute
+			bottom: 110px
+			margin: 0px auto
+			left: 0
+			right: 0
+			text-align: center
+			input
+				font-family: 'Quicksand', sans-serif
+				width: 180px
+				height: 30px
+				border-radius: 5px
+				border: 2px rgba(255,255,255,0.2) solid
+				text-align: center
+				font-size: 16px
+				background-color: rgba(0,0,0,0.4)
+				outline: none
+				color: white
+				font-weight: 300
+				transition: all 150ms linear
+				&:hover
+					border: 2px rgba(255,255,255,0.5) solid
+					transition: all 150ms linear
+			button
+				width: 110px
+				height: 36px
+				background-color: rgba(0,0,0,0.4)
+				border: 2px rgba(255,255,255,0.2) solid
+				font-family: 'Quicksand', sans-serif
+				border-radius: 5px
+				position: relative
+				// top: -3px
+				font-size: 16px
+				color: rgba(255,255,255,0.7)
+				font-weight: 300
+				transition: all 100ms linear
+				outline: none
+				&:hover
+					border: 2px rgba(255,255,255,0.4) solid
+					transition: all 100ms linear
+					cursor: pointer
+				&:active
+					background-color: rgba(0,0,0,0.6)
 
 #track
 	height: 770px

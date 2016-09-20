@@ -38,6 +38,9 @@ body {
           #home .content-hold .social a img:hover {
             top: -3px;
             transition: top 100ms linear; }
+          @media screen and (max-width: 700px) {
+            #home .content-hold .social a img {
+              width: 35px; } }
     #home .content-hold .home-title {
       text-align: center;
       font-family: Verdana;
@@ -77,11 +80,55 @@ body {
         padding-left: 10%; }
         #home .content-hold nav.left span {
           padding-right: 70px; }
+        @media screen and (max-width: 950px) {
+          #home .content-hold nav.left {
+            padding-left: 8%; }
+            #home .content-hold nav.left span {
+              padding-right: 55px; } }
+        @media screen and (max-width: 815px) {
+          #home .content-hold nav.left {
+            padding-left: 5%; }
+            #home .content-hold nav.left span {
+              padding-right: 45px; } }
+        @media screen and (max-width: 690px) {
+          #home .content-hold nav.left {
+            padding-left: 3%; }
+            #home .content-hold nav.left span {
+              padding-right: 35px; } }
+        @media screen and (max-width: 600px) {
+          #home .content-hold nav.left {
+            padding-left: 3%;
+            top: -110px; }
+            #home .content-hold nav.left span {
+              display: block;
+              margin-bottom: 11px; } }
       #home .content-hold nav.right {
         text-align: right;
         padding-right: 10%; }
         #home .content-hold nav.right span {
           padding-left: 60px; }
+        @media screen and (max-width: 950px) {
+          #home .content-hold nav.right {
+            padding-right: 8%; }
+            #home .content-hold nav.right span {
+              padding-left: 40px; } }
+        @media screen and (max-width: 815px) {
+          #home .content-hold nav.right {
+            padding-right: 5%; }
+            #home .content-hold nav.right span {
+              padding-left: 30px; } }
+        @media screen and (max-width: 690px) {
+          #home .content-hold nav.right {
+            padding-right: 3%; }
+            #home .content-hold nav.right span {
+              padding-left: 20px; } }
+        @media screen and (max-width: 600px) {
+          #home .content-hold nav.right {
+            padding-right: 3%;
+            top: -110px; }
+            #home .content-hold nav.right span {
+              display: block;
+              margin-bottom: 11px; } }
     #home .content-hold #home-arrow {
       position: absolute;
       bottom: 40px;

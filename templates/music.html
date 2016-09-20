@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>EG | Music</title>
+	<link rel="stylesheet" href="{% static 'css/music.css' %}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="{% static 'css/lightgallery.min.css' %}">
+	<script src="{% static 'js/lightgallery.min.js' %}"></script>
+	<script src="{% static 'js/lg-thumbnail.min.js' %}"></script>
+	<script src="{% static 'js/lg-fullscreen.min.js' %}"></script>
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet">
+</head>
+<body>
+	<div id="music">
+		<div class="title">EG</div>
+		<div class="content">
+			<div class="song-entry">
+				<div class="song-title">Out on the Edge</div>
+				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/280853893&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+				<div class="social">
+					<a href="">
+						<img src="{% static 'img/social_spotify.png' %}" alt="">
+					</a>
+					<a href="">
+						<img src="{% static 'img/social_youtube.png' %}" alt="">
+					</a>
+					<a href="">
+						<img src="{% static 'img/social_apple.png' %}" alt="">
+					</a>
+				</div>
+				<div class="info">
+					<div class="info-title">Collaborators</div>
+					<div class="role-name">Producer - Verdoe</div>
+					<div class="link"><a href="http://www.esotericsoundstudio.com/">http://www.esotericsoundstudio.com/</a></div>
+					<div class="role-name">Mixed by Pablo San Martin</div>
+					<div class="link"><a href="http://www.esotericsoundstudio.com/">http://www.esotericsoundstudio.com/</a></div>
+					<div class="role-name">Mastered by Alex</div>
+					<div class="link"><a href="http://www.alexpsaroudakis.com/#alex-mastering">http://www.alexpsaroudakis.com/#alex-mastering</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

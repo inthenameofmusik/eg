@@ -1,0 +1,59 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+
+#gallery {
+  height: 100%;
+  background: url("/static/img/street.jpg");
+  background-position: center 71%;
+  background-size: cover; }
+  #gallery .bg-cover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); }
+    #gallery .bg-cover .title {
+      margin: 50px auto 95px;
+      text-align: center;
+      font-family: "Quicksand", sans-serif;
+      font-size: 90px;
+      color: rgba(57, 97, 132, 0.7); }
+      #gallery .bg-cover .title .name {
+        letter-spacing: -18px; }
+    #gallery .bg-cover #lightgallery {
+      max-width: 800px;
+      margin: 0px auto; }
+      #gallery .bg-cover #lightgallery .img-hold {
+        width: 150px;
+        height: 150px;
+        float: left;
+        margin: 10px 20px;
+        position: relative; }
+        #gallery .bg-cover #lightgallery .img-hold:hover .picture-cover {
+          background-color: rgba(0, 0, 0, 0.7);
+          transition: all 150ms linear; }
+        #gallery .bg-cover #lightgallery .img-hold:hover .picture-cover img {
+          opacity: 0.9;
+          transition: all 160ms linear; }
+      #gallery .bg-cover #lightgallery .picture-cover {
+        transition: all 100ms linear;
+        background-color: rgba(0, 0, 0, 0.1);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%; }
+        #gallery .bg-cover #lightgallery .picture-cover img {
+          transition: all 100ms linear;
+          opacity: 0;
+          width: 50px;
+          display: block;
+          margin: 0px auto;
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%); }
+
+/*# sourceMappingURL=gallery.css.map */

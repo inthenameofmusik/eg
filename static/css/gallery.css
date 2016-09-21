@@ -3,6 +3,89 @@ html, body {
   padding: 0;
   height: 100%; }
 
+.home-title {
+  text-align: center;
+  font-family: Verdana;
+  font-size: 110px;
+  color: rgba(255, 255, 255, 0.65);
+  letter-spacing: -12px;
+  width: 300px;
+  margin: 65px auto 0px;
+  position: relative;
+  left: -6px; }
+
+.no-dec {
+  text-decoration: none; }
+
+nav {
+  float: left;
+  width: 50%;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: 30px;
+  top: -75px; }
+  nav span {
+    color: white;
+    font-family: "Quicksand", sans-serif;
+    font-size: 17px;
+    cursor: pointer; }
+    nav span:hover {
+      color: #787878; }
+  nav.left {
+    text-align: left;
+    padding-left: 10%; }
+    nav.left span {
+      padding-right: 70px; }
+    @media screen and (max-width: 950px) {
+      nav.left {
+        padding-left: 8%; }
+        nav.left span {
+          padding-right: 55px; } }
+    @media screen and (max-width: 815px) {
+      nav.left {
+        padding-left: 5%; }
+        nav.left span {
+          padding-right: 45px; } }
+    @media screen and (max-width: 690px) {
+      nav.left {
+        padding-left: 3%; }
+        nav.left span {
+          padding-right: 35px; } }
+    @media screen and (max-width: 600px) {
+      nav.left {
+        padding-left: 3%;
+        top: -110px; }
+        nav.left span {
+          display: block;
+          margin-bottom: 11px; } }
+  nav.right {
+    text-align: right;
+    padding-right: 10%; }
+    nav.right span {
+      padding-left: 60px; }
+    @media screen and (max-width: 950px) {
+      nav.right {
+        padding-right: 8%; }
+        nav.right span {
+          padding-left: 40px; } }
+    @media screen and (max-width: 815px) {
+      nav.right {
+        padding-right: 5%; }
+        nav.right span {
+          padding-left: 30px; } }
+    @media screen and (max-width: 690px) {
+      nav.right {
+        padding-right: 3%; }
+        nav.right span {
+          padding-left: 20px; } }
+    @media screen and (max-width: 600px) {
+      nav.right {
+        padding-right: 3%;
+        top: -110px; }
+        nav.right span {
+          display: block;
+          margin-bottom: 11px; } }
+
 #gallery {
   height: 100%;
   background: url("/static/img/street.jpg");

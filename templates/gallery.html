@@ -21,7 +21,17 @@
 <body>
 	<div id="gallery">
 		<div class="bg-cover">
-			<a class="title-tag" href="/"><div class="title"><span class="name">EG</span> | Gallery</div></a>
+			<a class="no-dec" href="{% url 'homepage' %}"><div class="home-title">EG</div></a>
+			<nav class="left">
+				<a class="no-dec" href="{% url 'homepage' %}#track"><span class="i1">Latest</span></a>
+				<a class="no-dec" href="{% url 'homepage' %}#satellite"><span class="i2">EP</span></a>
+				<a href="{% url 'music' %}" class="no-dec"><span class="i3">Music</span></a>
+			</nav>
+			<nav class="right">
+				<a class="no-dec" href="{% url 'gallery' %}"><span class="i1">Gallery</span></a>
+				<a href="{% url 'homepage' %}#bio" class="no-dec"><span class="i2">Bio</span></a>
+				<a href="{% url 'homepage' %}" class="no-dec"><span class="i3">Subscribe</span></a>
+			</nav>
 			<div id="lightgallery">
 				<a href="{% static 'img/elena_1.jpg' %}">
 					<div class="img-hold" style="position:relative;background:url('/static/img/elena_1.jpg');background-size:100%;background-position:center;">

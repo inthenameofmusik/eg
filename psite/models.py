@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.safestring import mark_safe
 
 class Email(models.Model):
 	name = models.CharField(max_length=80)
@@ -9,3 +10,11 @@ class Email(models.Model):
 
 class GalleryImage(models.Model):
 	picture = models.FileField(upload_to='gallery/')
+
+	def image_tag(self):
+		return mark_safe('<img src="%s" width="200" />' % (self.picture.url))
+
+	def __str__(self):
+		return '%s' % (self.picture.name, )
+
+	image_tag.short_description = 'Image'

@@ -221,15 +221,17 @@ body {
 #satellite {
   width: 100%;
   border: 1px transparent solid;
-  height: 500px;
+  height: 540px;
   background-color: rgba(255, 255, 255, 0.5); }
   #satellite .content {
     padding: 5px 160px;
     text-align: center;
     font-family: "Quicksand", sans-serif; }
   #satellite .ep-sub-title {
-    margin-top: 25px;
+    margin-top: 20px;
+    margin-bottom: 35px;
     font-weight: 700;
+    font-size: 22px;
     text-align: center;
     font-family: "Quicksand", sans-serif; }
 
@@ -238,11 +240,10 @@ body {
   background-color: rgba(255, 255, 255, 0.5); }
   #bio .title {
     text-align: center;
-    font-size: 30px;
-    font-family: Verdana;
-    letter-spacing: -2px;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.55); }
+    font-size: 28px;
+    font-family: "Quicksand";
+    letter-spacing: 0px;
+    color: rgba(0, 0, 0, 0.9); }
   #bio .content {
     padding: 30px 270px;
     text-align: justify;

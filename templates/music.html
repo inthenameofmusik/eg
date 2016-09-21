@@ -15,7 +15,17 @@
 </head>
 <body>
 	<div id="music">
-		<a class="title-tag" href="/"><div class="title">EG</div></a>
+		<a class="no-dec" href="{% url 'homepage' %}"><div class="home-title">EG</div></a>
+		<nav class="left">
+			<a class="no-dec" href="{% url 'homepage' %}#track"><span class="i1">Latest</span></a>
+			<a class="no-dec" href="{% url 'homepage' %}#satellite"><span class="i2">EP</span></a>
+			<span class="i3">Music</span>
+		</nav>
+		<nav class="right">
+			<a class="no-dec" href="{% url 'gallery' %}"><span class="i1">Gallery</span></a>
+			<a href="{% url 'homepage' %}#bio" class="no-dec"><span class="i2">Bio</span></a>
+			<a href="{% url 'homepage' %}" class="no-dec"><span class="i3">Subscribe</span></a>
+		</nav>
 		<div class="content">
 			<div class="song-entry">
 				<div class="song-title">Out on the Edge</div>
@@ -40,7 +50,7 @@
 					<div class="link"><a href="http://www.esotericsoundstudio.com/">http://www.esotericsoundstudio.com/</a></div>
 					<div class="role-name">Mixed by Pablo San Martin</div>
 					<div class="link"><a href="http://www.esotericsoundstudio.com/">http://www.esotericsoundstudio.com/</a></div>
-					<div class="role-name">Mastered by Alex</div>
+					<div class="role-name">Mastered by Alex Psaroudakis</div>
 					<div class="link"><a href="http://www.alexpsaroudakis.com/#alex-mastering">http://www.alexpsaroudakis.com/#alex-mastering</a></div>
 				</div>
 			</div>

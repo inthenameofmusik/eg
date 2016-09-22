@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 from .forms import EmailForm
+from .models import GalleryImage, Track
 
 
 def home_page(request):
@@ -12,9 +13,15 @@ def home_page(request):
 	else:
 		form = EmailForm()
 
-
-	context = {
-		'form': form
-	}
-
+	context = {'form': form}
 	return render(request, 'home.html', context)
+
+def gallery(request):
+	images = GalleryImage.objects.all()
+	context = {'images': images}
+	return render(request, 'gallery.html', context)
+
+def tracks(request):
+	tracks = Track.objects.all().order_by('-date_added')
+	context = {'tracks': tracks}
+	return render(request, 'music.html', context)

@@ -27,33 +27,33 @@
 			<a href="{% url 'homepage' %}" class="no-dec"><span class="i3">Subscribe</span></a>
 		</nav>
 		<div class="content">
+			{% for track in tracks %}
 			<div class="song-entry">
-				<div class="song-title">Out on the Edge</div>
-				<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/280853893&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+				<div class="song-title">{{ track.track_title }}</div>
+				{{track.soundcloud_html|safe}}
 				<div class="social">
-					<a href="">
+					<a href="{{track.spotify_url}}">
 						<img src="{% static 'img/social_spotify.png' %}" alt="">
 					</a>
-					<a href="">
+					<a href="{{track.youtube_url}}">
 						<img src="{% static 'img/social_youtube.png' %}" alt="">
 					</a>
-					<a href="">
+					<a href="{{track.apple_music_url}}">
 						<img src="{% static 'img/social_apple.png' %}" alt="">
 					</a>
-					<a href="">
+					<a href="{{track.tidal_url}}">
 						<img src="{% static 'img/social_tidal.png' %}" alt="">
 					</a>
 				</div>
 				<div class="info">
 					<div class="info-title">Collaborators</div>
-					<div class="role-name">Producer - Verdoe</div>
-					<div class="link"><a href="http://www.esotericsoundstudio.com/">http://www.esotericsoundstudio.com/</a></div>
-					<div class="role-name">Mixed by Pablo San Martin</div>
-					<div class="link"><a href="http://www.esotericsoundstudio.com/">http://www.esotericsoundstudio.com/</a></div>
-					<div class="role-name">Mastered by Alex Psaroudakis</div>
-					<div class="link"><a href="http://www.alexpsaroudakis.com/#alex-mastering">http://www.alexpsaroudakis.com/#alex-mastering</a></div>
+					{% for collab in track.collaborators.all %}
+					<div class="role-name">{{collab.role_name}}</div>
+					<div class="link"><a href="{{collab.personal_url}}">{{collab.personal_url}}</a></div>
+					{% endfor %}
 				</div>
 			</div>
+			{% endfor %}
 		</div>
 	</div>
 </body>

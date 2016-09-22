@@ -104,41 +104,43 @@ nav {
 #music .content {
   max-width: 800px;
   margin: 85px auto 70px; }
-#music .song-entry .song-title {
-  text-align: center;
-  font-family: "Quicksand", sans-serif;
-  font-size: 19px;
-  font-weight: 700;
-  margin-bottom: 20px; }
-#music .song-entry .social {
-  margin-top: 10px;
-  text-align: center; }
-  #music .song-entry .social a {
-    text-decoration: none; }
-    #music .song-entry .social a img {
-      width: 45px;
-      text-align: center;
-      margin: 0px 10px;
-      transition: all 150ms linear;
-      position: relative;
-      top: 0; }
-      #music .song-entry .social a img:hover {
-        top: -6px;
-        transition: all 150ms linear; }
-#music .song-entry .info {
-  font-family: "Quicksand", sans-serif;
-  text-align: center;
-  letter-spacing: 1px; }
-  #music .song-entry .info .info-title {
-    margin: 30px auto 0px;
-    font-size: 23px; }
-  #music .song-entry .info .role-name {
-    margin-top: 11px;
-    font-size: 16px; }
-  #music .song-entry .info .link {
-    letter-spacing: 0px;
-    font-size: 12px; }
-    #music .song-entry .info .link a {
+#music .song-entry {
+  margin-bottom: 115px; }
+  #music .song-entry .song-title {
+    text-align: center;
+    font-family: "Quicksand", sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 20px; }
+  #music .song-entry .social {
+    margin-top: 10px;
+    text-align: center; }
+    #music .song-entry .social a {
       text-decoration: none; }
+      #music .song-entry .social a img {
+        width: 45px;
+        text-align: center;
+        margin: 0px 10px;
+        transition: all 150ms linear;
+        position: relative;
+        top: 0; }
+        #music .song-entry .social a img:hover {
+          top: -6px;
+          transition: all 150ms linear; }
+  #music .song-entry .info {
+    font-family: "Quicksand", sans-serif;
+    text-align: center;
+    letter-spacing: 1px; }
+    #music .song-entry .info .info-title {
+      margin: 30px auto 0px;
+      font-size: 23px; }
+    #music .song-entry .info .role-name {
+      margin-top: 11px;
+      font-size: 16px; }
+    #music .song-entry .info .link {
+      letter-spacing: 0px;
+      font-size: 12px; }
+      #music .song-entry .info .link a {
+        text-decoration: none; }
 
 /*# sourceMappingURL=music.css.map */

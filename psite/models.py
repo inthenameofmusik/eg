@@ -18,3 +18,24 @@ class GalleryImage(models.Model):
 		return '%s' % (self.picture.name, )
 
 	image_tag.short_description = 'Image'
+
+class Collaborator(models.Model):
+	role_name = models.CharField(max_length=200)
+	personal_url = models.CharField(max_length=150)
+
+	def __str__(self):
+		return '%s' % (self.role_name, )
+
+class Track(models.Model):
+	track_title = models.CharField(max_length=60, null=True, blank=True)
+	soundcloud_html = models.CharField(max_length=500)
+	spotify_url = models.CharField(max_length=500)
+	youtube_url = models.CharField(max_length=500)
+	apple_music_url = models.CharField(max_length=500)
+	tidal_url = models.CharField(max_length=500)
+	collaborators = models.ManyToManyField(Collaborator)
+
+	date_added = models.DateField(auto_now_add=True)
+
+	def __str__(self):
+		return '%s' % (self.track_title, )

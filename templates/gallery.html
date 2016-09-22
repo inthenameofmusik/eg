@@ -33,62 +33,15 @@
 				<a href="{% url 'homepage' %}" class="no-dec"><span class="i3">Subscribe</span></a>
 			</nav>
 			<div id="lightgallery">
-				<a href="{% static 'img/elena_1.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/elena_1.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
+				{% for image in images %}
+					<a href="{{ image.picture.url }}">
+						<div class="img-hold" style="position:relative;background:url({{ image.picture.url }});background-size:100%;background-position:center;">
+							<div class="picture-cover">
+								<img src="{% static 'img/_magnifying.png' %}" alt="">
+							</div>
 						</div>
-					</div>
-				</a>
-				<a href="{% static 'img/street.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/street.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
-						</div>
-					</div>
-				</a>
-				<a href="{% static 'img/elena_2.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/elena_2.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
-						</div>
-					</div>
-				</a>
-				<a href="{% static 'img/elena_3.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/elena_3.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
-						</div>
-					</div>
-				</a>
-				<a href="{% static 'img/elena_4.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/elena_4.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
-						</div>
-					</div>
-				</a>
-				<a href="{% static 'img/elena_5.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/elena_5.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
-						</div>
-					</div>
-				</a>
-				<a href="{% static 'img/elena_6.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/elena_6.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
-						</div>
-					</div>
-				</a>
-				<a href="{% static 'img/elena_7.jpg' %}">
-					<div class="img-hold" style="position:relative;background:url('/static/img/elena_7.jpg');background-size:100%;background-position:center;">
-						<div class="picture-cover">
-							<img src="{% static 'img/_magnifying.png' %}" alt="">
-						</div>
-					</div>
-				</a>
+					</a>
+				{% endfor %}
 			</div>
 		</div>	
 	</div>

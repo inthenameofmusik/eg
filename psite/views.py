@@ -1,19 +1,24 @@
 from django.shortcuts import render
 
-from .forms import EmailForm
-from .models import GalleryImage, Track
+from .forms import RegisterForm
+from .models import GalleryImage, Track, EditableText
 
 
 def home_page(request):
 	if request.method == 'POST':
-		form = EmailForm(request.POST)
+		form = RegisterForm(request.POST)
 		if form.is_valid():
 			form.save()
-			form = EmailForm()
+			form = RegisterForm()
 	else:
-		form = EmailForm()
+		form = RegisterForm()
 
-	context = {'form': form}
+	latest_track = Track.objects.first()
+
+	news = EditableText.objects.get(section__iexact='News')
+	bio = EditableText.objects.get(section__iexact='Bio')
+
+	context = {'form': form, 'latest_track': latest_track, 'news': news, 'bio': bio}
 	return render(request, 'home.html', context)
 
 def gallery(request):

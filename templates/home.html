@@ -52,40 +52,30 @@
 	</div>
 	<div id="track">
 		<div class="cover-over">
-			<div class="title">Out On the Edge</div>
+			<div class="title">{{latest_track.track_title}}</div>
 			<div class="soundcloud-wrapper">
 				<div class="sc-wrapper-2">
-					<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/280853893&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+					{{latest_track.soundcloud_html|safe}}
 				</div>
 			</div>
-			<iframe src="https://embed.spotify.com/?uri=spotify:track:6pf6iatLx7YFxtmcQiUxJa" class='media-center' width="300" height="80" frameborder="0" allowtransparency="true" style="margin-top:70px;"></iframe>
+			<div class="spotify-wrapper">
+				{{latest_track.spotify_html|safe}}
+			</div>
 			<br><br>
 			<div class="media-center">
-			<a class='media-center' href="https://geo.itunes.apple.com/us/album/out-on-the-edge/id1142088168?i=1142088406&mt=1&app=music" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_music-lrg.svg) no-repeat;width:109px;height:40px;"></a>
+				{{latest_track.apple_music_html|safe}}
 			</div>
 		</div>
 	</div>
 	<div id="satellite">
-		<div class="ep-sub-title">Satellite Eyes EP Coming Fall 2016</div>
-		<div class="content"><span style="font-weight:700;">H</span>ave you ever had one of those nights where you lay down and look up at the sky and you see those tiny, bright lights? Satellites. 
-		These days, they seem to outshine the stars. They’ve always been astonishing to me - how can they can be so far away and only reflect sunlight, yet somehow still pierce the night sky. Satellite Eyes is how I choose to live - by keeping my focus bright and pointed on the final goal, like satellites roaming through the night sky.
-		<br><br>
-		I believe in a world full of people with these satellite eyes; a world of passion, dreams you chase with every inch of your soul and breath you breathe, and refusing to give up even when the world says you should.
-		 <br><br>
-		It’s not an easy journey - living on the edge at a reckless pace. Making enormous decisions that lead you to a concrete jungle as a wide-eyed dreamer, or ones that leave you with the realization that you’ve lost yourself in that same world you so desperately wanted to be a part of.
-		<br><br> 
-		 
-		You find yourself searching for love in a place of instant gratification and split-second emotional bartering. You realize that what you view as a galaxy to be explored, others see as a burst of flame from a match, fading almost as soon as it’s lit. You learn that even as a pioneer on this journey of discovery, you still want love, and that while your Satellite Eyes remain fixed on one direction, you still have to surround yourself with others whose lights shine as bright as your own.  Because even though you’ve braved the world, cold, late and alone when you’ve had to, sometimes you still need a nightlight. 
-		 <br><br>
-		So others with Satellite Eyes, join me. We’ll be each other’s nightlights - I’ll provide the soundtrack.</div>	
+		<div class="ep-sub-title">{{news.title}}</div>
+		<div class="content">{{news.content|safe}}
+		</div>	
 	</div>
 	<div id="bio">
-		<div class="title">About</div>
+		<div class="title">{{bio.title}}</div>
 		<div class="content">
-			Born and raised on a cattle farm in rural Canada, Elena’s music portrays the raw honest emotions of a girl making her way to adulthood by way of New York City. Having grown up homeschooled in northern British Columbia, Elena began classical piano training at the age of 6, in addition to guitar and violin. A natural-born storyteller, she learned to convey her passion through songwriting. Elena’s love for music and drive to make it her life’s work led her to New York City. That journey led to an exploration of every avenue of music, and Elena’s classical and country roots eventually began being displaced by a fervent and wild love affair with electronic indie-pop.
-The intensity that lies at the core of Elena as a person shines through her music - nostalgic lyrics calling out the dark and mysterious parts of life, weaving electronic melodies built on a foundation of classical music training, and a pulsing fearlessness, guiding listeners to find the thrilling parts in every moment of their lives.
-
-As someone who has knocked down the walls of every box society has tried to place her in, Elena is a living breathing example of conquering fears, believing in yourself, navigating the world of pop culture, and bringing our generation back in love with honest, genuine music.
+			{{bio.content|safe}}
 		</div>
 	</div>
 
@@ -93,6 +83,11 @@ As someone who has knocked down the walls of every box society has tried to plac
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
 	<script>
 		$(function() {
+
+			$('.sc-wrapper-2 iframe').attr('height', '300');
+
+			$('.spotify-wrapper iframe').addClass('media-center').attr('height', '80');
+
 			$('#home-arrow').click(function() {
 				$('html, body').animate({
 					scrollTop: 700

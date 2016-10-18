@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -121,10 +122,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_PATH = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
-    STATIC_PATH
+    STATIC_PATH,
 ]
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT=os.path.join(BASE_DIR,STATIC_URL.replace("/",""))
 MEDIA_URL = '/media/'
 
 

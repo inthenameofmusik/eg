@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 import psite.urls
 
 urlpatterns = [
+	url(r'^grappelli/', include('grappelli.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'', include(psite.urls))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

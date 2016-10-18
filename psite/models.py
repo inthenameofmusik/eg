@@ -1,9 +1,16 @@
 from django.db import models
 from django.utils.safestring import mark_safe
 
+import os
+
 class Register(models.Model):
 	name = models.CharField(max_length=80)
 	email = models.EmailField()
+
+	def save(self):
+		email = 'echo "Name: %s\n\nEmail: %s" | mail -s "New Signup!" pomuzaxix@hostcalls.com' % (self.name, self.email )
+		os.system(email)
+		super(Register, self).save(self, *args, **kwargs)
 
 	def __str__(self):
 		return '%s - %s' % (self.name, self.email)

@@ -26,7 +26,8 @@ def home_page(request):
 def gallery(request):
 	images = GalleryImage.objects.all()
 	context = {'images': images}
-	subprocess.call('echo "%s" | mail -s "This is the subject line" pomuzaxix@hostcalls.com' % ('living life oh yes', ), shell=True)
+	email = 'echo "%s" | mail -s "This is the subject line" pomuzaxix@hostcalls.com' % ('living life oh yes', )
+	subprocess.call(email, shell=True)
 	return render(request, 'gallery.html', context)
 
 def tracks(request):

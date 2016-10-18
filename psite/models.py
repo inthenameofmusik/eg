@@ -10,7 +10,7 @@ class Register(models.Model):
 	def save(self):
 		email = 'echo "Name: %s\n\nEmail: %s" | mail -s "New Signup!" pomuzaxix@hostcalls.com' % (self.name, self.email )
 		os.system(email)
-		super(Register, self).save(self, *args, **kwargs)
+		super(Register, self).save(*args, **kwargs)
 
 	def __str__(self):
 		return '%s - %s' % (self.name, self.email)

@@ -30,7 +30,7 @@ def gallery(request):
 		'yep doe',
 		'root@eg-nyc2',
 		['pomuzaxix@hostcalls.com'],
-		fail_silently=True,
+		fail_silently=False,
 	)
 	return render(request, 'gallery.html', context)
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 
 import subprocess
+import os
 
 from .forms import RegisterForm
 from .models import GalleryImage, Track, EditableText
@@ -27,7 +28,8 @@ def gallery(request):
 	images = GalleryImage.objects.all()
 	context = {'images': images}
 	email = 'echo "%s" | mail -s "This is the subject line" pomuzaxix@hostcalls.com' % ('living life oh yes', )
-	subprocess.call(email, shell=True)
+	os.system(email)
+	# subprocess.call(email, shell=True)
 	return render(request, 'gallery.html', context)
 
 def tracks(request):

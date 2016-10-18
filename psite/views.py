@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.core.mail import send_mail
 
 from .forms import RegisterForm
 from .models import GalleryImage, Track, EditableText
@@ -24,6 +25,13 @@ def home_page(request):
 def gallery(request):
 	images = GalleryImage.objects.all()
 	context = {'images': images}
+	send_mail(
+		'Subject doe',
+		'yep doe',
+		'root@eg-nyc2',
+		['pomuzaxix@hostcalls.com'],
+		fail_silently=True,
+	)
 	return render(request, 'gallery.html', context)
 
 def tracks(request):

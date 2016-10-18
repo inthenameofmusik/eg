@@ -76,14 +76,18 @@ WSGI_APPLICATION = 'eg.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
+    'local': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    },
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'django',
-	'USER': 'django',
-	'PASSWORD': 'Q9aUK9ibnw',
-	'HOST': 'localhost',
-	'PORT': '',
-    }
+        'USER': 'django',
+        'PASSWORD': 'Q9aUK9ibnw',
+        'HOST': 'localhost',
+        'PORT': '',
+    }       
 }
 
 
@@ -133,5 +137,12 @@ STATICFILES_DIRS = [
 MEDIA_ROOT=os.path.join(BASE_DIR,STATIC_URL.replace("/",""))
 MEDIA_URL = '/media/'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'Elena Goddard Website <root@eg-nyc2>'
 
 

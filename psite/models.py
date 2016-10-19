@@ -7,13 +7,29 @@ class Register(models.Model):
 	name = models.CharField(max_length=80)
 	email = models.EmailField()
 
-	def save(self):
+	def save(self, *args, **kwargs):
 		email = 'echo "Name: %s\n\nEmail: %s" | mail -s "New Signup!" pomuzaxix@hostcalls.com' % (self.name, self.email )
 		os.system(email)
-		super(Register, self).save(*args, **kwargs)
+		# super(Register, self).save(*args, **kwargs)
+		models.Model.save(self, *args, **kwargs)
 
 	def __str__(self):
 		return '%s - %s' % (self.name, self.email)
+
+class Message(models.Model):
+	"""contacting Elena via a message"""
+	mfrom = models.EmailField()
+	msubject = models.CharField(max_length=60)
+	mcontent = models.TextField()
+
+	def save(self, *args, **kwargs):
+		email = 'echo "From: %s\n\nMessage: %s" | mail -s "%s" pomuzaxix@hostcalls.com' % (self.mfrom, self.mcontent, self.msubject )
+		os.system(email)
+		super(Message, self).save(*args, **kwargs)
+
+	def __str__(self):
+		return '%s - %s' % (self.mfrom, self.msubject)
+		
 
 class GalleryImage(models.Model):
 	picture = models.FileField(upload_to='gallery/')

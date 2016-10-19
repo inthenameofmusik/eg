@@ -246,7 +246,6 @@ body
 		font-family: 'Quicksand'
 		letter-spacing: 0px
 		color: rgba(0,0,0,0.9)
-		// text-shadow: 1px 1px 1px rgba(0,0,0,0.55)
 	.content
 		padding: 30px 250px
 		text-align: justify
@@ -257,5 +256,45 @@ body
 			padding: 30px 80px
 		@media screen and (max-width: 500px)
 			padding: 30px 30px
+
+#message
+	min-height: 50px
+	background-color: rgba(255,255,255,0.5)
+	.title
+		text-align: center
+		font-size: 28px
+		font-family: 'Quicksand'
+		letter-spacing: 0px
+		color: rgba(0,0,0,0.9)
+	.content
+		text-align: center
+		padding: 35px 60px 50px
+		.mform
+			border: 2px gray solid
+			text-align: center
+			background-color: rgba(255,255,255,0.7)
+			font-family: 'Quicksand'
+			font-size: 16px
+		.mfrom, .msubject
+			width: 250px
+			height: 30px
+		.mcontent
+			width: 400px
+			height: 150px
+		form
+			button
+				margin-top: 10px
+				width: 170px
+				height: 40px
+				background-color: rgba(255, 255, 255, 0.7)
+				border: 2px gray solid
+				cursor: pointer
+				font-family: 'Quicksand'
+				font-size: 15px
+				transition: border 200ms linear
+				&:hover
+					border: 2px black solid
+					transition: border 200ms linear
+
 
 

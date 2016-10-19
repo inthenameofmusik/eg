@@ -1,8 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 
-from .forms import RegisterForm
+from .forms import RegisterForm, MessageForm
 from .models import GalleryImage, Track, EditableText
+
+
+def send_message(request):
+	if request.method == 'POST':
+		form = MessageForm(request.POST)
+		if form.is_valid():
+			form.save()
+	return redirect('homepage')
 
 
 def home_page(request):
@@ -16,10 +24,13 @@ def home_page(request):
 
 	latest_track = Track.objects.first()
 
+	mform = MessageForm()
+
 	news = EditableText.objects.get(section__iexact='News')
 	bio = EditableText.objects.get(section__iexact='Bio')
 
-	context = {'form': form, 'latest_track': latest_track, 'news': news, 'bio': bio}
+
+	context = {'form': form, 'latest_track': latest_track, 'news': news, 'bio': bio, 'mform': mform}
 	return render(request, 'home.html', context)
 
 def gallery(request):

@@ -90,7 +90,7 @@ DATABASES = {
     }       
 }
 
-# DATABASES['default'] = DATABASES['local']
+DATABASES['default'] = DATABASES['local']
 
 
 # Password validation

@@ -279,7 +279,9 @@ body
 			width: 250px
 			height: 30px
 		.mcontent
-			width: 400px
+			max-width: 400px
+			@media screen and (max-width: 200px)
+				width: 100px
 			height: 150px
 		form
 			button

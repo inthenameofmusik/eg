@@ -22,7 +22,7 @@ def home_page(request):
 	else:
 		form = RegisterForm()
 
-	latest_track = Track.objects.first()
+	latest_track = Track.objects.all().order_by('-date_added').first()
 
 	mform = MessageForm()
 

@@ -42,6 +42,10 @@ class GalleryImage(models.Model):
 
 	image_tag.short_description = 'Image'
 
+	class Meta:
+		verbose_name='Gallery Image'
+		verbose_name_plural='Galllery Images'
+
 class Collaborator(models.Model):
 	role_name = models.CharField(max_length=200)
 	personal_url = models.CharField(max_length=150)

@@ -287,8 +287,11 @@ body {
       width: 250px;
       height: 30px; }
     #message .content .mcontent {
-      width: 400px;
+      max-width: 400px;
       height: 150px; }
+      @media screen and (max-width: 200px) {
+        #message .content .mcontent {
+          width: 100px; } }
     #message .content form button {
       margin-top: 10px;
       width: 170px;

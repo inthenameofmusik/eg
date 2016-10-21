@@ -252,7 +252,7 @@ body {
     letter-spacing: 0px;
     color: rgba(0, 0, 0, 0.9); }
   #bio .content {
-    padding: 30px 250px;
+    padding: 30px 210px;
     text-align: justify;
     font-family: "Quicksand", sans-serif; }
     @media screen and (max-width: 1000px) {
@@ -287,11 +287,11 @@ body {
       width: 250px;
       height: 30px; }
     #message .content .mcontent {
-      max-width: 400px;
+      max-width: 250px !important;
       height: 150px; }
-      @media screen and (max-width: 200px) {
+      @media screen and (min-width: 350px) {
         #message .content .mcontent {
-          width: 100px; } }
+          width: 300px !important; } }
     #message .content form button {
       margin-top: 10px;
       width: 170px;

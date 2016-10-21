@@ -214,6 +214,12 @@ body {
       border: 2px white solid;
       padding: 9px;
       top: 7%; }
+      @media screen and (max-width: 650px) {
+        #track .cover-over .soundcloud-wrapper {
+          width: 500px; } }
+      @media screen and (max-width: 550px) {
+        #track .cover-over .soundcloud-wrapper {
+          width: 330px; } }
       #track .cover-over .soundcloud-wrapper .sc-wrapper-2 {
         border: 2px white solid;
         padding: 6px; }
